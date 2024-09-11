@@ -1,0 +1,50 @@
+.dialog-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dialog-form-field {
+    width: 100%;
+    max-width: 400px;  /* Make the text boxes larger */
+    margin-bottom: 15px;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Button styling */
+  .cancel-button {
+    background-color: red;
+    color: white;
+  }
+  
+  .save-button {
+    background-color: blue;
+    color: white;
+  }
+  
+  /* Add some padding to make buttons more clickable */
+  .cancel-button, .save-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Hover effects */
+  .cancel-button:hover {
+    background-color: darkred;
+  }
+  
+  .save-button:hover {
+    background-color: darkblue;
+  }
+  

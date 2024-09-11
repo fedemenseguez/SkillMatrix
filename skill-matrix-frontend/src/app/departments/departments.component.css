@@ -1,0 +1,52 @@
+.department-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  .department-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .actions-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .new-department-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .new-department-button mat-icon {
+    margin-right: 5px;
+  }
+  
+  /* Button hover effect */
+  .new-department-button:hover {
+    background-color: #007bff; /* Change to blue on hover */
+    color: white;
+  }
+  
+  .department-grid {
+    margin: 0 auto;
+    width: 80%;
+  }
+    /* Estilos adicionales para centrar el paginador y el campo de búsqueda */
+.search-field {
+  width: 50%;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  
+  .mat-paginator {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  

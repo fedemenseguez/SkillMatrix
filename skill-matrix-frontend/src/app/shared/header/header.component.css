@@ -1,0 +1,32 @@
+  header {
+    width: 100%;
+    background-color: #001132!important;
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+  }
+  
+  .navbar-text {
+    margin-right: 20px;
+    color: white;
+  }
+  .navbar-toggler{
+  opacity: 0.5;
+  color: white;
+  }

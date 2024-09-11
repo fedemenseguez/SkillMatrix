@@ -1,0 +1,18 @@
+<h2 mat-dialog-title class="dialog-title">{{ isEditMode ? 'Edit Skill' : 'New Skill' }}</h2>
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field class="dialog-form-field">
+    <input matInput [(ngModel)]="skill.skillName" placeholder="Skill Name" required>
+  </mat-form-field>
+  <mat-form-field class="dialog-form-field" appearance="fill">
+    <mat-label>Category</mat-label>
+    <mat-select [(ngModel)]="skill.categoryId" required>
+      <mat-option *ngFor="let category of categories" [value]="category._id">
+        {{ category.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" class="save-button" (click)="onSave()" [disabled]="!skill.skillName || !skill.categoryId">Save</button>
+</div>

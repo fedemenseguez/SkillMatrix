@@ -1,0 +1,21 @@
+<h2 mat-dialog-title class="dialog-title">{{ category._id ? 'Edit' : 'New' }} Category</h2>
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field class="dialog-form-field">
+    <input matInput [(ngModel)]="category.name" placeholder="Category Name">
+  </mat-form-field>
+  <mat-form-field class="dialog-form-field">
+    <textarea matInput [(ngModel)]="category.description" placeholder="Description"></textarea>
+  </mat-form-field>
+<mat-form-field class="dialog-form-field">
+  <mat-label>Parent Category</mat-label>
+  <mat-select [(ngModel)]="category.parentCategoryId">
+    <mat-option *ngFor="let parent of categories" [value]="parent._id">
+      {{ parent.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" class="save-button" (click)="onSave()">Save</button>
+</div>

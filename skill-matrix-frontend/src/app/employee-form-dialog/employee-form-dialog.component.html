@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>{{ isEditMode ? 'Edit Employee' : 'New Employee' }}</h2>
+
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field class="dialog-form-field">
+    <input matInput [(ngModel)]="employee.firstName" placeholder="First Name" required>
+  </mat-form-field>
+
+  <mat-form-field class="dialog-form-field">
+    <input matInput [(ngModel)]="employee.lastName" placeholder="Last Name" required>
+  </mat-form-field>
+
+  <mat-form-field class="dialog-form-field">
+    <input matInput [(ngModel)]="employee.email" placeholder="Email" required>
+  </mat-form-field>
+
+  <mat-form-field class="dialog-form-field">
+    <input matInput [(ngModel)]="employee.lastJobPosition" placeholder="Job Position">
+  </mat-form-field>
+
+  <mat-form-field class="dialog-form-field">
+    <input matInput [(ngModel)]="employee.resume" placeholder="Resume URL">
+  </mat-form-field>
+
+  <mat-form-field class="dialog-form-field">
+    <mat-select placeholder="Department" [(ngModel)]="employee.departmentId">
+      <mat-option *ngFor="let department of departments" [value]="department._id">{{ department.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="dialog-form-field">
+    <mat-select placeholder="Employee Lead" [(ngModel)]="employee.employeeLeadId">
+      <mat-option *ngFor="let lead of employees" [value]="lead._id">{{ lead.firstName }} {{ lead.lastName }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" class="save-button" (click)="onSave()" [disabled]="!employee.firstName || !employee.lastName || !employee.email">Save</button>
+</div>

@@ -1,0 +1,46 @@
+<div *ngIf="employee">
+  <h2>{{ employee.firstName }} {{ employee.lastName }}</h2>
+  <p>Email: {{ employee.email }}</p>
+  <p>Department: {{ employee.department?.name }}</p>
+  <p>Position: {{ employee.lastJobPosition }}</p>
+ 
+  <!-- Botón para subir el CV -->
+ <div class="upload-cv-section">
+  <h3>Upload CV</h3>
+  <input type="file" (change)="onFileSelected($event)">
+  <button mat-raised-button color="primary" (click)="uploadCV()">Upload</button>
+</div>
+  <h3>Skills</h3>
+  <ul>
+    <li *ngFor="let skillEmployee of employee.skillsEmployee">
+      Skill: {{ skillEmployee.skill.skillName }} - Experience Level: {{ skillEmployee.experienceLevel }}
+    </li>
+  </ul>
+
+  <h3>Job Expertise</h3>
+  <ul>
+    <li *ngFor="let job of employee.jobExpertise">
+      Company: {{ job.company }} ({{ job.startDate | date }} - {{ job.endDate | date }})
+      <br/>
+      Skills: {{ job.technicalSkills.join(', ') }}
+      <br/>
+      Description: {{ job.description }}
+    </li>
+  </ul>
+
+  <h3>Assessments</h3>
+  <ul>
+    <li *ngFor="let assessment of employee.assessments">
+      Technology: {{ assessment.technology }} - Score: {{ assessment.score }} - Date: {{ assessment.dateTaken | date  }}
+    </li>
+  </ul>
+
+  <h3>Generated Resumes</h3>
+  <ul>
+    <li *ngFor="let resume of employee.generatedResumes">
+      Generated for: {{ resume.generatedForJobDescription }}
+      <br/>
+      Content: {{ resume.content }}
+    </li>
+  </ul>
+</div>

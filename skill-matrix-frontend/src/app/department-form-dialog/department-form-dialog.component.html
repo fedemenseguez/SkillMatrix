@@ -1,0 +1,13 @@
+<h2 mat-dialog-title class="dialog-title">{{ isEditMode ? 'Edit Department' : 'New Department' }}</h2>
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field class="dialog-form-field">
+    <input matInput [(ngModel)]="department.name" placeholder="Department Name" required>
+  </mat-form-field>
+  <mat-form-field class="dialog-form-field">
+    <textarea matInput [(ngModel)]="department.description" placeholder="Description"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" class="save-button" (click)="onSave()" [disabled]="!department.name">Save</button>
+</div>

@@ -1,0 +1,49 @@
+.dialog-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dialog-form-field {
+    width: 100%;
+    max-width: 400px;  /* Ajuste para el tamaño de los campos */
+    margin-bottom: 15px;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos de los botones */
+  .cancel-button {
+    background-color: red;
+    color: white;
+  }
+  
+  .save-button {
+    background-color: blue;
+    color: white;
+  }
+  
+  /* Estilos adicionales para los botones */
+  .cancel-button, .save-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .cancel-button:hover {
+    background-color: darkred;
+  }
+  
+  .save-button:hover {
+    background-color: darkblue;
+  }
+  
